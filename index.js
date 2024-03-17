@@ -4,6 +4,9 @@ import { TwitterApi } from "twitter-api-v2";
 import cors from "cors";
 import fs from "fs";
 
+import dotenv from 'dotenv'
+dotenv.config()
+
 const app = express();
 const port = 3001;
 
