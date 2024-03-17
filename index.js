@@ -9,12 +9,11 @@ const port = 3001;
 
 // Fill your API credentials
 const client = new TwitterApi({
-  appKey: "x5ZHT53Ie0ON0gJ59etjBUUCj",
-  appSecret: "56A6B66xpfioKTH01sYns01EEfTty1sfuEfdrWP6l2czQbnBig",
-  accessToken: "1769128796492570624-Z9CZ3kKNr0CknXyeqpmJOj5P4R7oTW",
-  accessSecret: "dSnxzbI9YFHEyzi00vUWHJ2lxdSvOLdLtsBtgjbVAtg2U",
-  bearerToken:
-    "AAAAAAAAAAAAAAAAAAAAAGBMswEAAAAAfNdh40oaaFk5XsE8VfLvmOjRX8I%3Dw9WI2N01GrmYnbEMzhLzqLFcxPup0fGyOmXxuEAzEAKXoIy1Rh",
+  appKey: process.env.CONSUMER_KEY,
+  appSecret: process.env.CONSUMER_SECRET,
+  accessToken: process.env.ACCESS_KEY,
+  accessSecret: process.env.ACCESS_SECRET,
+  bearerToken: process.env.BEARER_TOKEN,
 });
 
 // Provide read write controls
