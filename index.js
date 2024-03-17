@@ -68,6 +68,10 @@ const storage = multer.diskStorage({
 
 const upload = multer({ dest: 'uploads/', storage: storage }); // Specify the directory where the uploaded files will be stored
 
+app.get('/', (req, res) => {
+  res.send('Welcome to Twitter-upload API')
+})
+
 app.post('/upload', upload.single('file'), (req, res) => {
   // Access the uploaded file using req.file
   if (req.file) {
